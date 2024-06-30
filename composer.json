@@ -1,0 +1,17 @@
+{
+    "name": "abdur/oop_concept",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RaihanaFerdousi",
+            "email": "raihanaferdousi110@gmail.com"
+        }
+    ],
+    "require": {}
+}
