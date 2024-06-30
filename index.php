@@ -2,6 +2,7 @@
 namespace App;
 
 
+
 require_once __DIR__."/vendor/autoload.php";
 
 echo "Hello world \n";
@@ -240,6 +241,60 @@ $teacher = new Teacher();
 echo $teacher;
 
 */
+
+/*
+✅ 13. Traits
+
+// Example 1:
+$student1 = new Student();
+$student1->connectDB();
+
+
+// Example 2 :
+
+
+$p = new Posts();
+$p->checkSize("posts.txt");
+*/ 
+
+/*
+✅ 14. Tight Coupling
+
+$course = new Course(1, 100);
+echo "Lesson ID: " . $course->lidObj->lid . PHP_EOL;
+
+*/ 
+
+/*
+
+✅15. Dependency Injection
+
+// Example 1: 
+$course = new Course(1);
+$lesson = new Lesson(100,$course);
+
+//Dependency Injection
+$quiz = new Quiz(1, $lesson, $course);
+
+echo "Course ID: " . $quiz->cid . PHP_EOL;
+echo "Lesson ID: " . $quiz->lid . PHP_EOL;
+echo "Quiz ID: " . $quiz->qid . PHP_EOL;
+
+
+Example 2:
+
+$university = new University('Boston University');
+$student = new Student('John', $university);
+
+echo "University Name: " . $student->universityName . PHP_EOL;
+echo "Student Name: " . $student->studentName . PHP_EOL;
+
+
+*/ 
+
+
+
+
 
 
 
