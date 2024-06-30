@@ -7,7 +7,7 @@ require_once __DIR__."/vendor/autoload.php";
 echo "Hello world \n";
 
 /*
-✅ 1.Files Class
+✅ 1.Files Class (Concept: Class,Object, property, method, namespace, autoloading)
 
 $file1 = new Files();
 echo $file1->displayContent("test.txt");
@@ -15,15 +15,28 @@ echo $file1->displayContent("test.txt");
 
 
 /*
-// ✅2.Employee Salary
+// ✅2.Employee Salary (Concept: Property promotion, Constructor, access modifier,type hinting)
 
-$emp1=new Employee(101, "Faisal ahmed", 4);
-echo $emp1->getName();
+$emp1 = new Employee(101, "Faisal ahmed", 4);
+$emp2 = new Employee(102, "Abdur Rahman Talha", 2);
+
+// Employee1
+
+$salary = $emp1->getSalaryAmount(20);
+echo $emp1->getName() . " has worked for " . $emp1->getWorkingDays() . " days and taken " . $emp1->getTotalLeaveTaken() . "  days leaves. \n";
+echo $emp1->getName() . " salary is {$salary} \n \n";
+
+
+// Employee2
+
+$salary2 = $emp2->getSalaryAmount(20);
+echo $emp2->getName() . " has worked for " . $emp2->getWorkingDays() . " days and taken " . $emp1->getTotalLeaveTaken() . "  days leaves. \n";
+echo $emp2->getName() . " salary is {$salary2} \n";
 */
 
 
 /*
-✅3. Student Class
+✅3. Student Class (Concept: Constant, helper method, self keyword, scope resolution operator)
 
 $student1 = new Student(51, 32, 88);
 
@@ -39,7 +52,7 @@ foreach ($student1Results as $subject => $result) {
 /*
 
 /*
-✅4. Implement Method Chaining for Posts Class
+✅4. Implement Method Chaining for Posts Class (Concept: Method Chaining, destructor)
 
 $post1 = new Posts("This is the Post Content");
 
@@ -50,13 +63,15 @@ echo $content . "\n";
 */
 
 /*
-//✅5. Inheritance
+//✅5. Inheritance (Concept: Inheritance, parent keyword, parent class, child class)
 
 echo "Dog \n";
 $dog1 = new Dog("Hush Puppies");
 $dog1->makeSound();
 $dog1->doesHunting();
+
 echo "xxxxxxxxxxxxx \n";
+
 echo "Tiger \n";
 $tiger1 = new Tiger("Royal Bengal Tiger", true);
 $tiger1->makeSound();
@@ -65,7 +80,7 @@ $tiger1->doesHunting();
 */
 
 
-// ✅ 6. Overriding
+// ✅ 6. Overriding (Concept : Overriding)
 
 /*
 $doctor=new Doctor();
@@ -79,7 +94,7 @@ echo $specialist->calculateFees(2);
 
 
 /*
-// ✅ 7. Final Keyword
+// ✅ 7. Final Keyword (Concept: Final Keyword)
 
 $bank=new Bank("Exim Bank");
 
@@ -103,7 +118,7 @@ foreach($bank->getUsers() as $user){
 
 
 /*
-// ✅ 8. Interface
+// ✅ 8. Interface (Concept: Multiple interface implementation)
 
 // Example : Car
 
@@ -120,7 +135,7 @@ $iPhone7->sendMessage(12321313, "Learning Interface.");
 */
 
 /*
-✅ 9. Abstract
+✅ 9. Abstract (Concept: Abstract method, Abstract class, Difference between abstract class and interface)
 
 // Example: Car
 
@@ -137,7 +152,7 @@ echo $db1->getConnection();
 */
 
 /*
-// ✅ 10. Static Method and Properties
+// ✅ 10. Static Method and Properties (Concept: Static Method, properties, self keyword)
 
 // Example a: Calculator
 
@@ -158,7 +173,7 @@ echo "The number of vowel in {$string} is : " . StringHelper::countVowel($string
 
 
 /*
-✅ 11. Polymorphism
+✅ 11. Polymorphism (Concept: Polymorphism)
 
 // Example 1: Phone
 
@@ -190,7 +205,7 @@ sendPhoneMessage($androidPhone,1234567890, "Hello from Android");
 
 
 /*
-✅ 12. Magic Methods
+✅ 12. Magic Methods (Concept: __call(), __debugInfo(),__set(), __get(), __toString() method)
 
 // Example 1.: __call 
 
