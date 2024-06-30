@@ -255,7 +255,7 @@ $student1->connectDB();
 
 $p = new Posts();
 $p->checkSize("posts.txt");
-*/ 
+*/
 
 /*
 ✅ 14. Tight Coupling
@@ -263,7 +263,7 @@ $p->checkSize("posts.txt");
 $course = new Course(1, 100);
 echo "Lesson ID: " . $course->lidObj->lid . PHP_EOL;
 
-*/ 
+*/
 
 /*
 
@@ -290,9 +290,80 @@ echo "University Name: " . $student->universityName . PHP_EOL;
 echo "Student Name: " . $student->studentName . PHP_EOL;
 
 
+*/
+
+/*
+✅16. Cloning Objects
+
+$post1 = new Posts("This is the First Post!");
+$post2 = $post1;
+$post1->post = "This is modified";
+echo $post2->post . PHP_EOL;
+
+$post2 = new Posts("This is the First Post!");
+$post3 = clone $post2;
+$post2->post = "This is modified";
+echo $post3->post . PHP_EOL;
+
+
+
+*/
+
+
+/*
+✅17. Serialize and UnSerialize Objects
+
+//First Seriable in File
+
+$post1 = new Posts("This is the First Post!");
+$seriablized = serialize($post1);
+echo $seriablized;
+file_put_contents( "posts.txt" , $seriablized);
+
+
+//Second UnSeriable from File into Objects.
+$seriablized1 = file_get_contents("posts.txt");
+$post2 = unserialize($seriablized1);
+echo $post2->post;
+
+
+
+
+*/
+
+
+/*
+// ✅18. Cache Objects
+
+// Usage
+$cache = new PhpCache(dirname(__FILE__).'\\cache\\', 600);
+$key = 'mykey';
+$value = $cache->get($key);
+if ($value == null) {
+    $value = 'new value';
+    $cache->set($key, $value);
+    echo 'created ' . $value;
+} else {
+    echo 'got ' . $value;
+}
+
+
+*/
+
+/*
+// ✅ 19. Iterating Objects
+
+$post1 = new Posts("This is the First Post!");
+
+foreach ($post1 as $key => $value) {
+    echo $key . ' => ' . $value;
+}
+
+echo PHP_EOL;
+
+var_dump($post1);
+
 */ 
-
-
 
 
 
