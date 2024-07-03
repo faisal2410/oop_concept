@@ -98,6 +98,10 @@ echo $specialist->calculateFees(2);
 /*
 // ✅ 7. Final Keyword (Concept: Final Keyword)
 
+//💡 class as final = Prevent Inheritance
+//💡 Method as final = Prevent Method Overriding
+
+
 $driver=new DriverFinal();
 $windows=new WindowsProgram();
 // $windows->runDriverUpdate();
