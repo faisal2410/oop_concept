@@ -1,5 +1,9 @@
 <?php
 namespace App;
+
+use App\final\DriverFinal;
+use App\final\WindowsProgram;
+
 require_once __DIR__."/vendor/autoload.php";
 
 echo "Hello world \n";
@@ -94,25 +98,11 @@ echo $specialist->calculateFees(2);
 /*
 // ✅ 7. Final Keyword (Concept: Final Keyword)
 
-$bank=new Bank("Exim Bank");
-
-$user1= new User("Faisal ahmed");
-$user2=new User("Abdur Rahman Talha",3000);
-
-$bank->addUser($user1);
-$bank->addUser($user2);
-
-$user1->deposit(500);
-$user2->withdraw(200);
-
-echo "Bank: ".$bank->getName()."\n";
-echo "Users: \n";
-
-foreach($bank->getUsers() as $user){
-    echo  "-". $user->getName(). ": \$" .$user->getBalance()."\n";
-}
-
-*/
+$driver=new DriverFinal();
+$windows=new WindowsProgram();
+// $windows->runDriverUpdate();
+$windows->test();
+*/ 
 
 
 /*
@@ -198,8 +188,8 @@ sendPhoneMessage($androidPhone,1234567890, "Hello from Android");
 
 (new Dog())->bark();
 (new Cat())->bark();
-
 */
+
 
 
 /*
